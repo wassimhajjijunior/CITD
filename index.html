@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    
+        <header class="header">
+            <div class="navbar">
+                <div class="juniorLogo">
+                    <img src="junior.png" alt="">
+                </div>
+                <div class="regButton"></div>
+            </div>
+        </header>
+        <main class="mainContent">
+            <div class="content">
+                <div class="logoEvent">
+                    <img src="CITD.png" alt="" class="logoImg">
+                </div>
+            </div>
+        </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="jquery.ripples-min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("body").ripples({
+			  dropRadius: 10,
+			  perturbance: 0.005,
+			});
+		})
+	</script>
+   
+</body>
+</html>
