@@ -1,40 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CITD</title>
+    <link rel="icon" href="junior.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- site content start -->
+    <div class="background"></div>
+    <!-- header start -->
     
-    
-        <header class="header">
-            <div class="navbar">
-                <div class="juniorLogo">
-                    <img src="junior.png" alt="">
-                </div>
-                <div class="regButton"></div>
-            </div>
-        </header>
-        <main class="mainContent">
-            <div class="content">
-                <div class="logoEvent">
-                    <img src="CITD.png" alt="" class="logoImg">
-                </div>
-            </div>
-        </main>
+      <nav>
+        <div class="juniorLogo">
+          <img src="junior.png" alt="" />
+        </div>
 
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#">Description</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Rules</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+
+        <div class="registreBtn">
+          <a href="#Registre">Regisster Now</a>
+        </div>
+      </nav>
+    
+    <!-- header end -->
+
+    <!-- main content start -->
+
+    <section class="mainContent">
+      <div id="Home" class="content">
+        <div class="logoEvent">
+          <img src="./logo/logo et cercle.png" alt="" class="logoImg" />
+        </div>
+        <!-- <div class="eventTitle">
+          <span>TechXpo 2025</span><br />Where Innovation Meets Inspiration
+        </div> -->
+        <div class="clock">
+          <div class="clock__item">
+            <span class="days"></span>
+          </div>
+          <div class="clock__colon">
+            <div class="clock__colon-item"></div>
+            <div class="clock__colon-item"></div>
+          </div>
+          <div class="clock__item">
+            <span class="hours"></span>
+          </div>
+          <div class="clock__colon">
+            <div class="clock__colon-item"></div>
+            <div class="clock__colon-item"></div>
+          </div>
+          <div class="clock__item">
+            <span class="minutes"></span>
+          </div>
+          <div class="clock__colon">
+            <div class="clock__colon-item"></div>
+            <div class="clock__colon-item"></div>
+          </div>
+          <div class="clock__item">
+            <span class="seconds"></span>
+          </div>
+        </div>
+
+        <div class="Slogan">Experience The Future , Today</div>
+      </div>
+
+      <!-- Register Now Start  -->
+
+      <section id="Registre" class="forms-section">
+        <h1 class="section-title">Register Now</h1>
+        <div class="forms">
+          <div class="form-wrapper is-active">
+            <button type="button" class="switcher switcher-login">
+              Roister
+              <span class="underline"></span>
+            </button>
+            <form class="form form-login">
+              <fieldset>
+                <div class="input-block">
+                  <label for="login-password">Name</label>
+                  <input id="login-password" type="Text" required />
+                </div>
+
+                <div class="input-block">
+                  <label for="login-email">E-mail</label>
+                  <input id="login-email" type="email" required />
+                </div>
+
+                <div class="input-block">
+                  <label for="login-Phone">Phone</label>
+                  <input id="login-phone" type="tel" required />
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-login">Register</button>
+            </form>
+          </div>
+          <div class="form-wrapper">
+            <button type="button" class="switcher switcher-signup">
+              Participant
+              <span class="underline"></span>
+            </button>
+            <form class="form form-signup">
+              <fieldset>
+                <div class="input-block">
+                  <label for="signup-password">Name</label>
+                  <input id="signup-password" type="text" required />
+                </div>
+
+                <div class="input-block">
+                  <label for="signup-email">E-mail</label>
+                  <input id="signup-email" type="email" required />
+                </div>
+
+                <div class="input-block">
+                  <label for="signup-password-confirm">Phone</label>
+                  <input id="signup-password-confirm" type="tel" required />
+                </div>
+              </fieldset>
+              <button type="submit" class="btn-login">Register</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Register Now end -->
+    </section>
+    <!-- line path start -->
+    <svg
+      width="1000"
+      height="2000"
+      viewBox="0 0 1000 2000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="squiggle">
+      <path
+        d="M-24.5 101C285 315 5.86278 448.291 144.223 631.238C239.404 757.091 559.515 782.846 608.808 617.456C658.101 452.067 497.627 350  406.298 426.797C314.968 486.521 250 612.858 322.909 865.537C384.086 1125.06 90 1007.94 90 1261.99C144.222 1807.35 819 1325 513 1142.5C152.717 927.625 -55 1916.5 1191.5 1852"
+        stroke="#f486ee"
+        stroke-width="60"
+        stroke-linejoin="round"
+        stroke-linecap="round" />
+    </svg>
+    <!-- line path end -->
+
+    <!-- main content end -->
+
+    <!-- site content end -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
+      integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-	<script src="jquery.ripples-min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("body").ripples({
-			  dropRadius: 10,
-			  perturbance: 0.005,
-			});
-		})
-	</script>
-   
-</body>
+    <script src="jquery.ripples-min.js"></script>
+    <script src="index.js"></script>
+    <script src="nav.js"></script>
+  </body>
 </html>
