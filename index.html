@@ -80,62 +80,67 @@
       </div>
 
       <!-- Register Now Start  -->
-
-      <section id="Registre" class="forms-section">
-        <h1 class="section-title">Register Now</h1>
-        <div class="forms">
-          <div class="form-wrapper is-active">
-            <button type="button" class="switcher switcher-login">
-              Roister
-              <span class="underline"></span>
-            </button>
-            <form class="form form-login">
-              <fieldset>
-                <div class="input-block">
-                  <label for="login-password">Name</label>
-                  <input id="login-password" type="Text" required />
-                </div>
-
-                <div class="input-block">
-                  <label for="login-email">E-mail</label>
-                  <input id="login-email" type="email" required />
-                </div>
-
-                <div class="input-block">
-                  <label for="login-Phone">Phone</label>
-                  <input id="login-phone" type="tel" required />
-                </div>
-              </fieldset>
-              <button type="submit" class="btn-login">Register</button>
-            </form>
-          </div>
-          <div class="form-wrapper">
-            <button type="button" class="switcher switcher-signup">
-              Participant
-              <span class="underline"></span>
-            </button>
-            <form class="form form-signup">
-              <fieldset>
-                <div class="input-block">
-                  <label for="signup-password">Name</label>
-                  <input id="signup-password" type="text" required />
-                </div>
-
-                <div class="input-block">
-                  <label for="signup-email">E-mail</label>
-                  <input id="signup-email" type="email" required />
-                </div>
-
-                <div class="input-block">
-                  <label for="signup-password-confirm">Phone</label>
-                  <input id="signup-password-confirm" type="tel" required />
-                </div>
-              </fieldset>
-              <button type="submit" class="btn-login">Register</button>
-            </form>
-          </div>
+      
+      <div class="card" id="Registre">
+        
+        <div class="card-header">
+            <h2>Join Us</h2>
         </div>
-      </section>
+        <div class="card-body">
+            <div class="option-buttons" id="optionButtons">
+                <button class="option-btn" data-option="participant">Participant</button>
+                <button class="option-btn" data-option="coder">Coder</button>
+            </div>
+
+            <div class="registration-form" id="participantForm">
+                <h3>Participant Registration</h3>
+                <form id="participantRegistration">
+                    <div class="form-group">
+                        <input type="text" id="p-name" required placeholder=" ">
+                        <label for="p-name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="p-email" required placeholder=" ">
+                        <label for="p-email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="p-phone" placeholder=" ">
+                        <label for="p-phone">Phone Number</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Register as Participant</span>
+                    </button>
+                    <a class="back-btn" id="backFromParticipant">← Back to options</a>
+                </form>
+            </div>
+
+            <div class="registration-form" id="coderForm">
+                <h3>Coder Registration</h3>
+                <form id="coderRegistration">
+                    <div class="form-group">
+                        <input type="text" id="c-name" required placeholder=" ">
+                        <label for="c-name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="c-email" required placeholder=" ">
+                        <label for="c-email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="c-github" required placeholder=" ">
+                        <label for="c-github">GitHub Username</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="c-skills" placeholder=" ">
+                        <label for="c-skills">Primary Skills</label>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Register as Coder</span>
+                    </button>
+                    <a class="back-btn" id="backFromCoder">← Back to options</a>
+                </form>
+            </div>
+        </div>
+    </div>
 
       <!-- Register Now end -->
     </section>
@@ -157,6 +162,10 @@
     <!-- line path end -->
 
     <!-- main content end -->
+
+    <!-- footer start -->
+
+    
 
     <!-- site content end -->
     <script src="https://unpkg.com/scrollreveal"></script>

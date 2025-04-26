@@ -12,15 +12,116 @@ $(document).ready(function () {
 
 // Register start
 
-const switchers = [...document.querySelectorAll('.switcher')]
+document.addEventListener('DOMContentLoaded', function() {
+  const optionButtons = document.querySelectorAll('.option-btn');
+  const participantForm = document.getElementById('participantForm');
+  const coderForm = document.getElementById('coderForm');
+  const optionButtonsContainer = document.getElementById('optionButtons');
+  const backFromParticipant = document.getElementById('backFromParticipant');
+  const backFromCoder = document.getElementById('backFromCoder');
+  const participantRegistration = document.getElementById('participantRegistration');
+  const coderRegistration = document.getElementById('coderRegistration');
+  const card = document.querySelector('.card');
 
-switchers.forEach(item => {
-	item.addEventListener('click', function() {
-		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
-		this.parentElement.classList.add('is-active')
-	})
-})
+  optionButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          optionButtons.forEach(btn => btn.classList.remove('active'));
+          
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          // Animate card
+          card.style.transform = 'translateY(-5px) rotateX(5deg)';
+          setTimeout(() => {
+              card.style.transform = 'translateY(0) rotateX(0)';
+          }, 300);
+          
+          // Hide all forms
+          participantForm.classList.remove('active');
+          coderForm.classList.remove('active');
+          
+          // Show the selected form
+          const option = this.getAttribute('data-option');
+          if (option === 'participant') {
+              setTimeout(() => {
+                  participantForm.classList.add('active');
+              }, 200);
+          } else if (option === 'coder') {
+              setTimeout(() => {
+                  coderForm.classList.add('active');
+              }, 200);
+          }
+          
+          // Hide the option buttons
+          optionButtonsContainer.style.display = 'none';
+      });
+  });
 
+  backFromParticipant.addEventListener('click', function(e) {
+      e.preventDefault();
+      participantForm.classList.remove('active');
+      setTimeout(() => {
+          optionButtonsContainer.style.display = 'flex';
+          optionButtons.forEach(btn => btn.classList.remove('active'));
+      }, 300);
+  });
+
+  backFromCoder.addEventListener('click', function(e) {
+      e.preventDefault();
+      coderForm.classList.remove('active');
+      setTimeout(() => {
+          optionButtonsContainer.style.display = 'flex';
+          optionButtons.forEach(btn => btn.classList.remove('active'));
+      }, 300);
+  });
+
+  participantRegistration.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add loading animation
+      const btn = this.querySelector('.submit-btn');
+      btn.innerHTML = '<span>Processing...</span>';
+      setTimeout(() => {
+          btn.innerHTML = '<span>Registration Successful!</span>';
+          setTimeout(() => {
+              btn.innerHTML = '<span>Register as Participant</span>';
+          }, 2000);
+      }, 1500);
+  });
+
+  coderRegistration.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Add loading animation
+      const btn = this.querySelector('.submit-btn');
+      btn.innerHTML = '<span>Processing...</span>';
+      setTimeout(() => {
+          btn.innerHTML = '<span>Registration Successful!</span>';
+          setTimeout(() => {
+              btn.innerHTML = '<span>Register as Coder</span>';
+          }, 2000);
+      }, 1500);
+  });
+
+  // Floating label effect
+  document.querySelectorAll('.form-group input').forEach(input => {
+      input.addEventListener('focus', function() {
+          this.parentNode.querySelector('label').style.transform = 'translateY(-25px) scale(0.9)';
+          this.parentNode.querySelector('label').style.color = '#4a6fa5';
+      });
+      
+      input.addEventListener('blur', function() {
+          if (!this.value) {
+              this.parentNode.querySelector('label').style.transform = '';
+              this.parentNode.querySelector('label').style.color = '';
+          }
+      });
+      
+      // Initialize labels if input has value
+      if (input.value) {
+          input.parentNode.querySelector('label').style.transform = 'translateY(-25px) scale(0.9)';
+      }
+  });
+});
 
 // Register end
 
