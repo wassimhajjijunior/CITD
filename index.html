@@ -7,10 +7,13 @@
     <title>CITD</title>
     <link rel="icon" href="junior.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
   <body>
     <!-- site content start -->
-    <div class="background"></div>
+    <div class="background">
+      
+    </div>
     <!-- header start -->
     
       <nav>
@@ -165,10 +168,63 @@
 
     <!-- footer start -->
 
-    
+    <footer>
+      <div class="footer-bg"></div>
+      <div class="particles" id="particles"></div>
+      <div class="footer-container">
+          <!-- Left Column -->
+          <div class="footer-column left">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Blog</a></li>
+              </ul>
+          </div>
+          
+          <!-- Middle Column with Logo -->
+          <div class="footer-column middle">
+              <img src="./junior.png" alt="Company Logo" class="footer-logo">
+              <div class="social-icons">
+                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="footer-column right">
+              <h3>Contact Us</h3>
+              <ul>
+                  <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+                  <li><a href="mailto:info@example.com">info@example.com</a></li>
+                  <li>123 Business Ave, Suite 400</li>
+                  <li>New York, NY 10001</li>
+                  <li>Mon-Fri: 9AM - 5PM</li>
+              </ul>
+          </div>
+          
+      </div>
+      
+      <div class="footer-bottom">
+          <p>&copy; <span id="year"></span> Your Company. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+      </div>
+      
+      <div class="back-to-top" id="backToTop">
+          <i class="fas fa-arrow-up"></i>
+      </div>
+  </footer>
+
+    <!-- footer end -->
 
     <!-- site content end -->
+    <script src="footer.js"></script>
+
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
